@@ -1,0 +1,117 @@
+2019-06-24 18:36:24,121 ERROR: Exception on /user/Johnny [GET] [in /usr/local/lib/python3.7/site-packages/flask/app.py:1780]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 2311, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 1834, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 1737, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/local/lib/python3.7/site-packages/flask/_compat.py", line 36, in reraise
+    raise value
+  File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 1832, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 1818, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/usr/local/lib/python3.7/site-packages/flask_login/utils.py", line 261, in decorated_view
+    return func(*args, **kwargs)
+  File "/Users/stevenjohn/Documents/Python/Flask/app/routes.py", line 81, in user
+    user=user, posts=posts.items, next_url=next_url, prev_url=prev_url)
+  File "/usr/local/lib/python3.7/site-packages/flask/templating.py", line 135, in render_template
+    context, ctx.app)
+  File "/usr/local/lib/python3.7/site-packages/flask/templating.py", line 117, in _render
+    rv = template.render(context)
+  File "/usr/local/lib/python3.7/site-packages/jinja2/asyncsupport.py", line 76, in render
+    return original_render(self, *args, **kwargs)
+  File "/usr/local/lib/python3.7/site-packages/jinja2/environment.py", line 1008, in render
+    return self.environment.handle_exception(exc_info, True)
+  File "/usr/local/lib/python3.7/site-packages/jinja2/environment.py", line 780, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/local/lib/python3.7/site-packages/jinja2/_compat.py", line 37, in reraise
+    raise value.with_traceback(tb)
+  File "/Users/stevenjohn/Documents/Python/Flask/app/templates/user.html", line 1, in top-level template code
+    {% extends "base.html" %}
+  File "/Users/stevenjohn/Documents/Python/Flask/app/templates/base.html", line 1, in top-level template code
+    {% extends 'bootstrap/base.html' %}
+  File "/usr/local/lib/python3.7/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 1, in top-level template code
+    {% block doc -%}
+  File "/usr/local/lib/python3.7/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 4, in block "doc"
+    {%- block html %}
+  File "/usr/local/lib/python3.7/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 20, in block "html"
+    {% block body -%}
+  File "/usr/local/lib/python3.7/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 23, in block "body"
+    {% block content -%}
+  File "/Users/stevenjohn/Documents/Python/Flask/app/templates/base.html", line 53, in block "content"
+    {% block app_content %}{% endblock %}
+  File "/Users/stevenjohn/Documents/Python/Flask/app/templates/user.html", line 12, in block "app_content"
+    {% if user.last_seen %} <p><b>Last seen: </b>{{ moment(user.last_seen).calandar() }}</p> {% endif %}
+jinja2.exceptions.UndefinedError: 'flask_moment._moment object' has no attribute 'calandar'
+2019-06-24 18:36:42,369 INFO: Microblog startup [in /Users/stevenjohn/Documents/Python/Flask/app/__init__.py:30]
+2019-06-24 18:38:21,939 INFO: Microblog startup [in /Users/stevenjohn/Documents/Python/Flask/app/__init__.py:30]
+2019-06-24 18:38:41,343 INFO: Microblog startup [in /Users/stevenjohn/Documents/Python/Flask/app/__init__.py:30]
+2019-06-24 18:39:02,754 INFO: Microblog startup [in /Users/stevenjohn/Documents/Python/Flask/app/__init__.py:30]
+2019-06-24 18:39:13,150 INFO: Microblog startup [in /Users/stevenjohn/Documents/Python/Flask/app/__init__.py:30]
+2019-06-24 18:40:58,363 INFO: Microblog startup [in /Users/stevenjohn/Documents/Python/Flask/app/__init__.py:30]
+2019-06-24 18:44:59,828 INFO: Microblog startup [in /Users/stevenjohn/Documents/Python/Flask/app/__init__.py:30]
+2019-06-24 18:47:43,050 INFO: Microblog startup [in /Users/stevenjohn/Documents/Python/Flask/app/__init__.py:30]
+2019-06-24 18:51:37,330 ERROR: Exception on /edit_profile [POST] [in /usr/local/lib/python3.7/site-packages/flask/app.py:1780]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 2311, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 1834, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 1737, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/local/lib/python3.7/site-packages/flask/_compat.py", line 36, in reraise
+    raise value
+  File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 1832, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 1818, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/usr/local/lib/python3.7/site-packages/flask_login/utils.py", line 261, in decorated_view
+    return func(*args, **kwargs)
+  File "/Users/stevenjohn/Documents/Python/Flask/app/routes.py", line 93, in edit_profile
+    if form.validate_on_submit():
+  File "/usr/local/lib/python3.7/site-packages/flask_wtf/form.py", line 101, in validate_on_submit
+    return self.is_submitted() and self.validate()
+  File "/usr/local/lib/python3.7/site-packages/wtforms/form.py", line 310, in validate
+    return super(Form, self).validate(extra)
+  File "/usr/local/lib/python3.7/site-packages/wtforms/form.py", line 152, in validate
+    if not field.validate(self, extra):
+  File "/usr/local/lib/python3.7/site-packages/wtforms/fields/core.py", line 206, in validate
+    stop_validation = self._run_validation_chain(form, chain)
+  File "/usr/local/lib/python3.7/site-packages/wtforms/fields/core.py", line 226, in _run_validation_chain
+    validator(form, self)
+TypeError: validate_username() takes 1 positional argument but 2 were given
+2019-06-24 18:52:31,304 INFO: Microblog startup [in /Users/stevenjohn/Documents/Python/Flask/app/__init__.py:30]
+2019-06-24 18:53:23,427 ERROR: Exception on /edit_profile [POST] [in /usr/local/lib/python3.7/site-packages/flask/app.py:1780]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 2311, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 1834, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 1737, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/local/lib/python3.7/site-packages/flask/_compat.py", line 36, in reraise
+    raise value
+  File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 1832, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.7/site-packages/flask/app.py", line 1818, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/usr/local/lib/python3.7/site-packages/flask_login/utils.py", line 261, in decorated_view
+    return func(*args, **kwargs)
+  File "/Users/stevenjohn/Documents/Python/Flask/app/routes.py", line 93, in edit_profile
+    if form.validate_on_submit():
+  File "/usr/local/lib/python3.7/site-packages/flask_wtf/form.py", line 101, in validate_on_submit
+    return self.is_submitted() and self.validate()
+  File "/usr/local/lib/python3.7/site-packages/wtforms/form.py", line 310, in validate
+    return super(Form, self).validate(extra)
+  File "/usr/local/lib/python3.7/site-packages/wtforms/form.py", line 152, in validate
+    if not field.validate(self, extra):
+  File "/usr/local/lib/python3.7/site-packages/wtforms/fields/core.py", line 206, in validate
+    stop_validation = self._run_validation_chain(form, chain)
+  File "/usr/local/lib/python3.7/site-packages/wtforms/fields/core.py", line 226, in _run_validation_chain
+    validator(form, self)
+  File "/Users/stevenjohn/Documents/Python/Flask/app/forms.py", line 40, in validate_username
+    if User.query.filter_by(self.username).first() is not None:
+TypeError: filter_by() takes 1 positional argument but 2 were given
+2019-06-24 18:55:43,745 INFO: Microblog startup [in /Users/stevenjohn/Documents/Python/Flask/app/__init__.py:30]
